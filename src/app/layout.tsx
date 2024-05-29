@@ -1,6 +1,14 @@
+/** @format */
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { HomeIcon } from "./icons/home";
+import { MailIcon } from "./icons/mail";
+import { MessagesIcon } from "./icons/messages";
+import { PortfolioIcon } from "./icons/portfolio";
+import { SettingIcon } from "./icons/setting";
+import { UserIcon } from "./icons/user";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +24,33 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="fixed top-[200px] left-[0px] bg-gray-300 h-[45px] w-[50px] flex justify-center items-center">
+          <SettingIcon />
+        </div>
+        {children}
+
+        <div className="fixed top-1/2 translate-y-[-50%] right-[50px] flex flex-col gap-3">
+          <div className="h-[45px] w-[45px] rounded-full bg-[#ffb400] flex justify-center items-center cursor-pointer gap-3 text-white">
+            <HomeIcon />
+          </div>
+          <div className="h-[45px] w-[45px] rounded-full bg-[#ffb400] flex justify-center items-center cursor-pointer">
+            <UserIcon />
+          </div>
+          <div className="h-[45px] w-[45px] rounded-full bg-[#ffb400] flex justify-center items-center cursor-pointer">
+            <PortfolioIcon />
+          </div>
+          <div className="h-[45px] w-[45px] rounded-full bg-[#ffb400] flex justify-center items-center cursor-pointer">
+            <MailIcon />
+          </div>
+          <div className="h-[45px] w-[45px] rounded-full bg-[#ffb400] flex justify-center items-center cursor-pointer">
+            <MessagesIcon />
+          </div>
+          <div className="h-[45px] w-[45px] rounded-full bg-[#ffb400] flex justify-center items-center cursor-pointer">
+            <HomeIcon />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
