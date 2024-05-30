@@ -6,4 +6,39 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  color: white;
 }
+
+.circle .mask,
+.circle .fill-1 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.inside-circle {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  background: #212020;
+  line-height: 120px;
+  text-align: center;
+  margin-top: 13px;
+  margin-left: 13px;
+  color: white;
+  position: absolute;
+  z-index: 100;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.mask .fill-1 {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #ffb400;
+}
+
